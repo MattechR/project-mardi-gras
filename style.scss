@@ -1,0 +1,264 @@
+$primary: #9453a6;
+$secondary: #8cbf3f;
+$third: #f2cc0f;
+$white-c: #f2f2f2;
+$black-c: #0d0d0d;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $white-c;
+  font-family: "Roboto", sans-serif;
+  border-radius: 20px;
+  color: $black-c;
+  text-shadow: 0 1px 2px $white-c;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.body-image {
+  background-image: url(img/8.jpg);
+  box-shadow: 0 2px 6px $third;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+.nav {
+  &bar {
+    background-color: $white-c;
+    background-color: $primary;
+    border-radius: 20px;
+    color: $black-c;
+  }
+  &-item {
+    font-size: 2rem;
+    text-shadow: 0 1px 2px $white-c;
+    color: $secondary;
+    :hover {
+      color: $third;
+    }
+  }
+  &-link {
+    color: $black-c;
+  }
+}
+
+.d-flex {
+  background-color: $primary;
+  border-radius: 20px;
+}
+.col {
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+.card {
+  &-cover {
+    border-radius: 20px;
+    text-align: center;
+  }
+  &-button {
+    &:hover {
+      text-shadow: 0px 4px 10px $black-c;
+      opacity: 0.7;
+    }
+  }
+}
+.page-title {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  color: $black-c;
+  text-shadow: 0 4px 6px $white-c;
+  box-shadow: 0 2px 5px $secondary;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+.about {
+  &-text {
+    background-color: $black-c;
+    border: 2px solid $third;
+    border-radius: 10px;
+    font-size: 26px;
+    color: $white-c;
+    text-shadow: 1px 1px 2px $white-c;
+    word-spacing: 2px;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px;
+  border-radius: 20px;
+  align-items: center;
+  text-align: center;
+}
+#fname {
+  text-align: center;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  text-shadow: 0 1px 2px #f2f2f2;
+  background-color: #8cbf3f;
+  &:hover {
+    background-color: #f2cc0f;
+
+    opacity: 0.7;
+  }
+}
+#lname {
+  text-align: center;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  text-shadow: 0 1px 2px #f2f2f2;
+  background-color: #8cbf3f;
+  &:hover {
+    background-color: #f2cc0f;
+    opacity: 0.7;
+  }
+}
+#email {
+  text-align: center;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  text-shadow: 0 1px 2px #f2f2f2;
+  background-color: #8cbf3f;
+  &:hover {
+    background-color: #f2cc0f;
+    opacity: 0.7;
+  }
+}
+#message {
+  text-align: center;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  text-shadow: 0 1px 2px #f2f2f2;
+  background-color: #8cbf3f;
+  &:hover {
+    background-color: #f2cc0f;
+    opacity: 0.7;
+  }
+}
+#form-btn {
+  text-align: center;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  text-shadow: 0 1px 2px #f2f2f2;
+  background-color: #8cbf3f;
+  padding: 10px;
+  margin-bottom: 20px;
+  &:hover {
+    background-color: #f2cc0f;
+    opacity: 0.7;
+  }
+}
+.accordion {
+  padding: 10px;
+  &-header {
+    background-color: $primary;
+    color: $black-c;
+    text-shadow: 0 1 2 $white-c;
+    border-radius: 20px;
+  }
+
+  &-button {
+    font-size: 2rem;
+    background-color: $primary;
+    color: $black-c;
+    text-shadow: 0 1 2 $white-c;
+    border-radius: 20px;
+    &:not(.collapsed) {
+      background-color: $primary;
+      color: $black-c;
+      text-shadow: 0 1 2 $white-c;
+      border-radius: 20px;
+    }
+  }
+
+  &-item {
+    background-color: $third;
+    color: $black-c;
+    text-shadow: 0 1 2 $white-c;
+    border-radius: 20px;
+  }
+}
+.button {
+  font-size: 1rem;
+  color: $black-c;
+  border: solid $black-c;
+  border-radius: 20px;
+  background-color: $secondary;
+  padding: 20px;
+  &:hover {
+    color: $primary;
+    background-color: $third;
+    opacity: 0.7;
+  }
+}
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  max-width: 100%;
+  background-color: $black-c;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $black-c transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
